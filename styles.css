@@ -1,0 +1,21 @@
+body {
+	overflow: hidden;
+}
+
+.grid-container {
+	margin-top: 18vh;
+	display: grid;
+	grid-auto-rows: 100%;
+	grid-template-columns: 40% 60%;
+	grid-template-areas: "a b";
+}
+
+.pictures {
+	grid-area: a;
+	background: black;
+}
+	
+.text {
+	grid-area: b;
+	background: red;
+}
