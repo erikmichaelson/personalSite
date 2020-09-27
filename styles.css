@@ -1,9 +1,25 @@
+:root {
+	--forestGreen: 083d00;
+	--deepBlue: 00083d;
+	--burgundy: 3d0008;
+}
+@font-face {
+	font-family: FiraCode-Regular;
+	src: url("fonts/FiraCode-Regular.otf") format("opentype");
+}
 body {
 	overflow: hidden;
+	font-family: FiraCode-Regular, monospace, !important;
+/*    font-family: "Lucida Console", Courier, monospace;	*/
+
+}
+h1,h2,h3,h4,h5,p {
+	font-family: "FiraCode-Regular", monospace;
 }
 
 .grid-container {
-	margin-top: 18vh;
+	margin-top: 12vh;
+	margin-left: 8vh;
 	display: grid;
 	grid-auto-rows: 100%;
 	grid-template-columns: 40% 60%;
@@ -17,5 +33,22 @@ body {
 	
 .text {
 	grid-area: b;
-	background: red;
+	background: grey;
+	padding:15px;
+}
+
+.nav {
+	position: fixed;
+	left:0;
+	top:12vh;
+	display: inline;	
+}
+
+.nav-item {
+	color: grey;
+	margin-left: 18px;
+}
+.nav-item:hover{
+	color: black;
+	text:bold;
 }
