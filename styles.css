@@ -1,34 +1,71 @@
 :root {
-	--forestGreen: #083d00;
-	--deepBlue: #00083d;
-	--burgundy: #3d0008;
+	--greenish: #abd3b0;
+	--blueish: #abced3;
+	--pinkish: #d3abce;
+	--beigeish: #d3b0ab;
 }
 @font-face {
 	font-family: FiraCode-Regular;
 	src: url("fonts/Fira/FiraCode-Regular.otf") format("opentype");
 }
 @font-face {
-	font-family: FiraCode-Regular;
-	src: url("fonts/Epilogue/static/Epilogue-Regular.ttf") format("opentype");
+	font-family: FiraCode-Bold;
+	src: url("fonts/Fira/FiraCode-Bold.otf") format("opentype");
 }
 body {
 	overflow: hidden;
-	font-family: FiraCode-Regular, monospace, !important;
-/*    font-family: "Lucida Console", Courier, monospace;	*/
-
+	font-family: FiraCode-Regular, monospace;
 }
-h1,h2,h3,h4 {
-	font-family: "Epilogue";
-}
-h5,p {
+h1,h2,h3,h4,h5,p {
 	font-family: "FiraCode-Regular", monospace;
 }
-h1,h2,h3,h4,h5,p::selection {
-	color: var(--forestGreen);
+b {
+	font-family: "FiraCode-Bold", monospace;
+	font-weight: normal;
+}
+h1{
+  position: relative;
+  display:inline-block;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: var(--greenish);
+  left: 0;
+  bottom: 0;
+  height: .6em;
+  z-index: -1;
+}
+h2{
+  position: relative;
+  display:inline-block;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background: var(--pinkish);
+  left: 0;
+  bottom: 0;
+  height: .6em;
+  z-index: -1;
+}
+p > a {
+	color: var(--blueish);
+}
+h3 > a{
+	text-decoration: none;
+}
+::selection {
+	background-color: var(--beigeish);
+}
+::-moz-selection {
+	background-color: var(--beigeish);
 }
 
 .grid-container {
-	margin-top: 12vh;
+	margin-top: 23vh;
 	margin-left: 8vh;
 	display: grid;
 	grid-auto-rows: 100%;
@@ -36,21 +73,25 @@ h1,h2,h3,h4,h5,p::selection {
 	grid-template-areas: "a b";
 }
 
-.pictures {
+.left {
 	grid-area: a;
-	background: black;
+	padding:20px;
 }
 	
-.text {
+.right {
 	grid-area: b;
-	background: grey;
-	padding:15px;
+	padding:20px;
+}
+
+.pageTitle {
+	position: fixed;
+	top:25px;
 }
 
 .nav {
 	position: fixed;
 	left:0;
-	top:12vh;
+	top:23vh;
 	display: inline;	
 }
 
@@ -61,4 +102,5 @@ h1,h2,h3,h4,h5,p::selection {
 .nav-item:hover{
 	color: black;
 	text:bold;
+	cursor: pointer;
 }
