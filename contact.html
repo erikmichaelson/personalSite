@@ -11,21 +11,42 @@
 	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="styles.css">
+	  <style>
+		.link-container {
+			margin-top:40vh;
+			margin-left:8vh;
+			/*
+			display: grid;
+			grid-auto-rows: 100%;
+			grid-template-columns: 33% 33% 33%;
+			grid-template-areas: 'a b c';	*/
+		}
+		.link-container > a {
+			text-align: center;
+		}
+		.left {
+			grid-area: a;
+			padding: 20px;
+		}
+		.center {
+			grid-area: b;
+			padding: 20px;
+		}
+		.right {
+			grid-area: c;
+			padding: 20px;
+		}
+		</style>
 
 
 	</head>
 
 	<body>
 		<div class="w3-content" style="max-width:800px;">
-			<div class="grid-container">
-				<div class="pictures">
-					<img src="boundaryMe.jpg" alt="does this work" style="height:auto; width:100%;">
-				</div>
-				<div class="text">
-					<h1>Hi I'm Erik</h1>
-					<p>I'm a computer science and econ student at Wheaton College. I'm interested in how we can understand the world through models we make of it.</p>
-					<p>Check out some of my work and feel free to say hi!</p>
-				</div>
+			<div class="row">
+				<a class='col-4' href='mailto:e.cmichaelson@gmail.com'>email</a>
+				<a class='col-4'>linkedin</a>
+				<a class='col-4'>github</a>
 			</div>
 			<div class="nav">
 				<div class="nav-item">
@@ -39,11 +60,6 @@
 				</div>
 				<div class="nav-item">
 					<h3 style="color:black"><a href="contact.html">contact</a></h3>
-				</div>
-				<div class="nav-item">
-					<i class="fa fa-github"></i>
-					<i class="fa fa-github"></i>
-					<i class="fa fa-linkedin"></i>
 				</div>
 			</div>
 		</div>
