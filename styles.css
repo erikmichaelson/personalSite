@@ -13,7 +13,7 @@
 	src: url("fonts/Fira/FiraCode-Bold.otf") format("opentype");
 }
 body {
-	overflow: hidden;
+	/*overflow: hidden;	*/
 	font-family: FiraCode-Regular, monospace;
 }
 h1,h2,h3,h4,h5,p {
@@ -70,8 +70,10 @@ h3 > a{
 }
 
 @media only screen and (min-width: 768px) {
-	.row { margin-left:8vw; }
+	/*.row { margin-left:8vw; }	*/
 }
+
+.col-4 { text-align: center; }
 
 .row::after {
   content: "";
@@ -102,7 +104,6 @@ h3 > a{
 
 .w3-content {
 	position: relative;
-	margin-left: 160px;
 	top: 100px;
 }
 
